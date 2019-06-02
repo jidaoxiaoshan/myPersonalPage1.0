@@ -1,0 +1,26 @@
+{{extend './_layouts/home.html'}}
+{{block 'title'}}
+<title>Web前端开发工程师几道小山</title>
+{{/block}}
+{{block 'head'}}
+<link rel="stylesheet" type="text/css" href="/public/css/default.css">
+<link rel="stylesheet" type="text/css" href="/public/css/main.css">
+{{/block}}
+{{block 'content'}}
+<div class="content">
+    <div class="main">
+        <h2>最新更新:</h2>
+        {{ each articles.free_notes }}
+        {{ if $index < 3 }}
+        <div class="item box_shadow">
+            <a href="/show_articles?id={{ $value.id }}">
+                <h3>{{ $value.title }}</h3>
+                <p><span>作者：{{ $value.author }}</span> <span>发表时间：{{ $value.date_time }}</span></p>
+                <p>{{ $value.contents[0] }}</p>
+            </a>
+        </div>
+        {{ /if }}
+        {{ /each }}
+    </div>
+</div>
+{{/block}}

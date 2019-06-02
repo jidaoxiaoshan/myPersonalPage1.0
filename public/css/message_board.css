@@ -1,0 +1,94 @@
+
+.header_nav a[href="message_board"] {
+    background-color: #f5faff;
+    color: #23527c;
+}
+
+.main ul {
+    float:left;
+    width:100%;
+    height:auto;
+}
+.main ul li {
+    min-height:300px;
+    width:210px;
+    float:left;
+    margin:65px 15px 0;
+    padding:55px 15px 15px;
+    background-color: #e8ddff;
+    position: relative;
+    border-left: 1px solid #c1a3cd;
+    border-right: 1px solid #c1a3cd;
+}
+
+.main ul li dd p {
+    border-top: 1px solid #54c9c9;
+    padding-top:10px;
+    text-indent: 2em;
+}
+
+.main ul li dd p:last-child{
+    text-align: right;
+    position: absolute;
+    bottom: 0;
+}
+.tip_h {
+    position: absolute;
+    left: -2px;
+    top: -16px;
+    width: 100%;
+    height: 68px;
+    background: url(/public/images/tip1_h.gif) no-repeat left top;
+}
+
+.message{
+    width:100%;
+    padding: 20px 30px;
+    margin-top: 20px;
+}
+
+.message h2{
+    line-height:60px;
+    font-size:30px;
+    color:#23527c;
+    font-weight: 700;
+    border-bottom: 2px solid #54c9c9;
+    margin-bottom: 15px;
+}
+
+.message p {
+    font-size: 18px;
+}
+
+.message input {
+    outline: none;
+    border: 0;
+    border-bottom: 1px solid black;
+    margin-left: 1em;
+    padding-left: 1em;
+}
+
+.message button {
+    border: 0;
+    float: right;
+    background-color: #31a2a2;
+    border-radius: 10px;
+    color: #f5faff;
+    padding: 3px 10px;
+}
+
+.message button:hover {
+    background-color: #f5faff;
+    color: #23527c;
+}
+
+.message textarea {
+    width: 100%;
+    height: 200px;
+    resize: none;
+    padding: 20px;
+    margin-top: 15px;
+    border-radius: 10px;
+    font-size: 16px;
+}
+

@@ -1,0 +1,30 @@
+
+{{extend './_layouts/home.html'}}
+
+{{block 'title'}}
+<title>几道小山的作品展示</title>
+{{/block}}
+
+{{block 'head'}}
+<link rel="stylesheet" type="text/css" href="/public/css/project.css">
+<link rel="stylesheet" type="text/css" href="/public/css/main.css">
+{{/block}}
+
+{{block 'content'}}
+<div class="content">
+    <div class="main">
+        <div>
+            <h2>作品展示: <a href="https://jidaoxiaoshan.github.io/show.html" target="_blank"><strong>点我</strong>查看其他一些小demo</a></h2>
+            <ul>
+                <li><a href="/project/demo001" class="box_shadow" target="_blank">仿QQTIM视差效果页面</a></li>
+                <li><a href="/project/demo002" class="box_shadow" target="_blank">使用全屏插件完成的一个展示页面</a></li>
+                <li><a href="/project/demo003" class="box_shadow" target="_blank">3D轮播图</a></li>
+                {{ each project }}
+                <li><a href="{{ $value.href }}" class="box_shadow" target="_blank">{{ $value.title }}</a></li>
+                {{ /each }}
+            </ul>
+            <div class="clear"></div>
+        </div>
+    </div>
+</div>
+{{/block}}

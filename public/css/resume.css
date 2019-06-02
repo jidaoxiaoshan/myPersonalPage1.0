@@ -1,0 +1,76 @@
+.header_nav a[href="resume"] {
+    background-color: #f5faff;
+    color: #23527c;
+}
+
+.resume {
+    width: 100%;
+    height: 100%;
+    padding: 20px;
+    position: relative;
+}
+
+.resume div {
+    position: relative;
+    width: 500px;
+    border: 1px solid #31a2a2;
+    padding: 20px;
+    margin: 20px 0 20px 20px;
+    background-color: #f5faff;
+    border-radius: 5px;
+}
+
+.resume div:nth-child(2) {
+    position: absolute;
+    left: 540px;
+    top: 20px;
+}
+
+.resume div:nth-child(4),
+.resume div:nth-child(5){
+    width: 96.5%;
+}
+
+.resume table {
+    width: 100%;
+}
+
+.resume caption {
+    font-size: 28px;
+    font-weight: 700;
+    color: #23527c;
+    border-bottom: 1px solid #31a2a2;
+    margin-bottom: 20px;
+}
+
+.resume th {
+    width: 30%;
+    color: #23527c;
+    text-align: right;
+}
+
+.resume td {
+    width: 70%;
+}
+
+.resume div:nth-child(4) th,
+.resume div:nth-child(5) th{
+    width: 12%;
+}
+
+.resume th,
+.resume td {
+    font-size: 18px;
+    padding: 10px 0;
+}
+
+.resume th span {
+    display: inline-block;
+    text-indent: 2em;
+}
+
+.resume td span {
+    padding-right: 1em;
+    color: gold;
+}
+

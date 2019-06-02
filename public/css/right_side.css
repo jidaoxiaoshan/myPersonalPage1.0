@@ -1,0 +1,99 @@
+.right_side_box {
+    position: absolute;
+    left: 50%;
+    transform: translateX(190%);
+    top: 50px;
+    width: 300px;
+    z-index: 9999;
+}
+
+.right_side_box div a,
+.right_arts_item{
+    display: block;
+    text-decoration: none;
+    color: #000000;
+    padding: 3px 5px;
+}
+
+.right_side_box div a:hover,
+.right_arts_item:hover{
+    color: #23527c;
+    font-weight: 700;
+    background-color: #54c9c9;
+}
+
+.right_arts_list,
+.right_tags{
+    width: 100%;
+    border: 2px solid #54c9c9;
+    padding: 0 30px 30px;
+    margin-bottom: 20px;
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+.right_arts_list h3,
+.right_tags h3 {
+    font-size: 20px;
+    line-height: 30px;
+    color: red;
+    border-bottom: 2px solid #54c9c9;
+}
+
+/*标签部分的样式*/
+.right_tags li {
+    text-align: center;
+    margin: 0 auto;
+    margin-top: 15px;
+    float: left;
+    margin-right: 15px;
+}
+
+.right_tags li:nth-child(7n) {
+    background-color: #fff4cb;
+}
+
+/*背景颜色*/
+.right_tags li:nth-child(7n+1) {
+    background-color: #93ff7a;
+}
+
+.right_tags li:nth-child(7n+2) {
+    background-color: #ffd8af;
+}
+
+.right_tags li:nth-child(7n+3) {
+    background-color: #ffb3e8;
+}
+
+.right_tags li:nth-child(7n+4) {
+    background-color: #bde3ff;
+}
+
+.right_tags li:nth-child(7n+5) {
+    background-color: #ff807f;
+}
+
+.right_tags li:nth-child(7n+6) {
+    background-color: #b3b8ff;
+}
+
+/*时间标签部分的样式*/
+.right_side_box .right_arts_list li {
+    text-align: center;
+    margin: 0 auto;
+    margin-top: 15px;
+}
+
+.right_side_box .right_arts_item {
+    margin-bottom: 10px;
+}
+
+.right_side_box .month {
+    float: left;
+    margin: 10px 15px 0 0;
+}
+
+.right_side_box .month:last-child {
+    margin-bottom: 20px;
+}

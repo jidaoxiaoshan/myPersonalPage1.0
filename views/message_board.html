@@ -1,0 +1,45 @@
+{{extend './_layouts/home.html'}}
+
+{{block 'title'}}
+<title>给几道小山留言</title>
+{{/block}}
+
+{{block 'head'}}
+<link rel="stylesheet" type="text/css" href="/public/css/message_board.css">
+<link rel="stylesheet" type="text/css" href="/public/css/main.css">
+{{/block}}
+
+{{block 'content'}}
+<div class="content">
+    <div class="main">
+        <div>
+            <h2>给作者的留言:</h2>
+            <ul>
+                {{ each message }}
+                {{ if $index < 200 }}
+                <li class="box_shadow">
+                    <div class="tip_h"></div>
+                    <dl>
+                        <dt><p>{{ $value.name }}：</p></dt>
+                        <dd>
+                            <p>{{ $value.contents }}</p>
+                            <p>{{ $value.date_time }}</p>
+                        </dd>
+                    </dl>
+                    <div class="tip_f"></div>
+                </li>
+                {{ /if }}
+                {{ /each }}
+            </ul>
+            <div class="clear"></div>
+        </div>
+    </div>
+    <div class="message">
+        <h2>给作者留言:</h2>
+        <form action="/message_board" method="post">
+            <p>用户名：<input type="text" placeholder="请输入用户名" name="name" required minlength="2" maxlength="20"><button class="box_shadow">提交留言</button></p>
+            <textarea class="box_shadow" placeholder="给作者的留言" name="contents" required minlength="6" maxlength="144"></textarea>
+        </form>
+    </div>
+</div>
+{{/block}}

@@ -1,0 +1,23 @@
+{
+  "name": "my_study_code",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "directories": {
+    "lib": "lib"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node app.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "art-template": "^4.13.2",
+    "blueimp-md5": "^2.10.0",
+    "body-parser": "^1.18.3",
+    "express": "^4.16.4",
+    "express-art-template": "^1.0.1"
+  }
+}

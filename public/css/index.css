@@ -1,0 +1,33 @@
+﻿
+.wrap {
+    background: #fff;
+    min-width: 1200px;
+    position: relative
+}
+
+.main {
+    width: 1200px;
+    height: 535px;
+    overflow: hidden;
+    margin: 0 auto;
+    position: relative;
+    text-align: center;
+}
+
+.main_inner {
+    margin-top: 180px;
+}
+
+.main_inner h2 {
+    color: #fff;
+}
+
+.main_inner h2:first-child {
+    font-size: 66px;
+}
+
+.main_inner p {
+    margin-top: 45px;
+    color: #888888;
+}
+

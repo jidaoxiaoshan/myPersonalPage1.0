@@ -1,0 +1,37 @@
+{{extend './_layouts/home.html'}}
+
+{{block 'title'}}
+<title>几道小山的文章</title>
+{{/block}}
+
+{{block 'head'}}
+<link rel="stylesheet" type="text/css" href="/public/css/articles.css">
+<link rel="stylesheet" type="text/css" href="/public/css/main.css">
+{{/block}}
+
+{{block 'content'}}
+<div class="content">
+    <div class="main">
+        <h2>添加新文章:</h2>
+        <form action="add_article" method="post">
+            <label for="title">标题:</label>
+            <input class="box_shadow" type="text" id="title" name="title" required minlength="3"><br>
+            <label for="contents">文章内容:</label>
+            <textarea class="box_shadow" id="contents" name="contents" required minlength="100"></textarea><br>
+            <label for="tags">标签:</label>
+            <input class="box_shadow" type="text" id="tags" name="tags" required minlength="3"><br>
+            <label for="password">管理员:</label>
+            <input class="box_shadow" type="password" name="password" id="password" required minlength="9"><br>
+            <input id="btn" class="box_shadow" type="submit" value="发布"><br>
+        </form>
+        <br>
+        <form action="add_project" method="post">
+            <label for="pro_name">项目名称:</label>
+            <input class="box_shadow" type="text" id="pro_name" name="title" required minlength="3"><br>
+            <label for="pro_href">项目地址:</label>
+            <input class="box_shadow" type="text" name="href" id="pro_href" required minlength="3"><br>
+            <input class="box_shadow" type="submit" value="发布"><br>
+        </form>
+    </div>
+</div>
+{{/block}}

@@ -1,0 +1,31 @@
+{{extend './_layouts/home.html'}}
+
+{{block 'title'}}
+<title>几道小山的书架</title>
+{{/block}}
+
+{{block 'head'}}
+<link rel="stylesheet" type="text/css" href="/public/css/bookshelf.css">
+<link rel="stylesheet" type="text/css" href="/public/css/main.css">
+{{/block}}
+
+{{block 'content'}}
+<div class="content">
+    <div class="main">
+        <div>
+            <h2>我的书架: <span>点击图片进入下载界面</span></h2>
+            <ul>
+                {{ each books }}
+                <li>
+                    <a href={{ $value.href }} target="_blank">
+                        <img src={{ $value.src }}
+                             alt={{ $value.title }} title={{ $value.title }}>
+                    </a>
+                </li>
+                {{ /each }}
+            </ul>
+            <div class="clear"></div>
+        </div>
+    </div>
+</div>
+{{/block}}

@@ -1,0 +1,67 @@
+
+.header_nav a[href="project"] {
+    background-color: #f5faff;
+    color: #23527c;
+}
+
+.main h2 a {
+    font-size: 18px;
+    text-decoration: none;
+    color: red;
+}
+
+.main h2 a strong {
+    color: darkred;
+    padding: 5px;
+    border: 2px solid darkred;
+}
+
+.main ul {
+    float:left;
+    width:100%;
+    height:auto;
+}
+.main ul li {
+    height:160px;
+    vertical-align:bottom;
+    width:110px;
+    float:left;
+    margin:17px 14px 0;
+    padding-bottom:19px;
+}
+.main ul li a {
+    display:block;
+    height:100%;
+    text-decoration: none;
+    border: 1px solid rgba(0,0,0,.3);
+    text-align: center;
+    padding: 40px 20px;
+}
+
+.main ul li:nth-child(7n) a {
+    background-color: #fff4cb;
+}
+
+.main ul li:nth-child(7n+1) a {
+    background-color: #93ff7a;
+}
+
+.main ul li:nth-child(7n+2) a {
+    background-color: #ffd8af;
+}
+
+.main ul li:nth-child(7n+3) a {
+    background-color: #ffb3e8;
+}
+
+.main ul li:nth-child(7n+4) a {
+    background-color: #bde3ff;
+}
+
+.main ul li:nth-child(7n+5) a {
+    background-color: #ff807f;
+}
+
+.main ul li:nth-child(7n+6) a {
+    background-color: #b3b8ff;
+}

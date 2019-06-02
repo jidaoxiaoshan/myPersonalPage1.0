@@ -1,0 +1,29 @@
+
+.header_nav a[href="articles"] {
+    background-color: #f5faff;
+    color: #23527c;
+}
+
+label {
+    display: block;
+    font-size: 18px;
+}
+
+input ,
+textarea{
+    width: 100%;
+    resize: none;
+    padding: 20px;
+    font-size: 18px;
+    margin-bottom: 20px;
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+    border-radius: 10px;
+    border: 0;
+    text-indent: 2em;
+}
+
+textarea {
+    min-height: 300px;
+}
+

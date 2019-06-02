@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    {{block 'title'}}
+    <title>Web前端开发工程师几道小山的个人网站</title>
+    {{/block}}
+    <meta name="keywords" content="几道小山，前端开发，web，JavaScript，jQuery，bootstrap布局，Vue，nodejs">
+    <meta name="description"
+          content="几道小山是一名前端开发工程师，掌握JavaScript语言、HTML+CSS布局与样式，ajax数据处理，jQuery，bootstrap布局，熟悉三大前端框架之Vue开发，了解nodejs，PHP等服务端开发">
+    <link rel="shortcut icon" type="image/ico" href="/public/images/icon.ico">
+    <link rel="stylesheet" type="text/css" href="/public/lib/bootstrap-3.3.7-dist/css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="/public/css/common.css">
+    <link rel="stylesheet" type="text/css" href="/public/css/left_side.css">
+    <link rel="stylesheet" type="text/css" href="/public/css/right_side.css">
+    {{block 'head'}}
+
+    {{/block}}
+</head>
+<body id="mydiv">
+    <!--顶部板块-->
+    {{block 'header'}}
+    {{include '../_partials/header.html'}}
+    {{/block}}
+
+    <div class="container">
+        <!--主要内容板块-->
+        {{block 'content'}}
+
+        {{/block}}
+
+        <!--左侧滚动栏板块-->
+        {{block 'left_side'}}
+        {{include '../_partials/left_side.html'}}
+        {{/block}}
+
+        <!--右侧标签栏-->
+        {{block 'right_side'}}
+        {{include '../_partials/right_side.html'}}
+        {{/block}}
+    </div>
+
+    <!--底部板块-->
+    {{include '../_partials/footer.html'}}
+
+    <script src="/public/lib/jquery/jquery.min.js"></script>
+    <script src="/public/lib/canvas-particle.js"></script>
+    <script id="bdshare_js" data="type=slide&amp;img=1&amp;pos=right&amp;uid=0"></script>
+    <script id="bdshell_js"></script>
+    <script>
+        let bds_config = {"bdTop": 300};
+        document.getElementById("bdshell_js").src = "http://bdimg.share.baidu.com/static/js/shell_v2.js?cdnversion=" + Math.ceil(new Date() / 3600000);
+    </script>
+    <script>
+
+        // 左侧滚动板块
+        $(function () {
+            let index = 0;
+            let leftHangerBar = function () {
+                index++;
+                let angle = -index * 90;
+                $(".left_side_box ul").css("transform", "rotateY(" + angle + "deg)");
+            }
+
+            setInterval(function () {
+                leftHangerBar()
+            },2000)
+            
+            $("html,body").on("scroll", function () {
+                console.log('1')
+            })
+        });
+        // 右侧标签栏
+        $(function () {
+            let $container = $(".container")
+            let $content = $(".content")
+            let $right_side_box = $(".right_side_box")
+            let hC = $content.height()
+            let hR = $right_side_box.height()
+            if ( hR > hC) {
+                $container.height(hR)
+            } else {
+                $container.height(hC)
+            }
+        })
+    </script>
+    <script>
+
+        // 背景动态小点点
+        let pcolor = "0, 0, 0";
+        let pline = "84,201,201";
+        $(function () {
+            //配置
+            var config = {
+                vx: 9,	//小球x轴速度,正为右，负为左
+                vy: 9,	//小球y轴速度
+                height: 2,	//小球高宽，其实为正方形，所以不宜太大
+                width: 2,
+                count: 100,		//点个数
+                color: pcolor, 	//点颜色
+                stroke: pline, 		//线条颜色
+                dist: 9000, 	//点吸附距离
+                e_dist: 30000, 	//鼠标吸附加速距离
+                max_conn: 20 	//点到点最大连接数
+            }
+            //调用
+            CanvasParticle(config);
+        })
+    </script>
+    <script>
+        $(function () {
+            $(".right_arts_item").on("click", function () {
+                $(this).parent().children("div").eq(1).addClass("show").removeClass("hide")
+                $(this).parent().siblings("li").each(function () {
+                    $(this).children("div").eq(1).addClass("hide").removeClass("show")
+                })
+            })
+        })
+    </script>
+    {{block 'script'}}
+
+    {{/block}}
+</body>
+</html>

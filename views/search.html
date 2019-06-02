@@ -1,0 +1,30 @@
+
+{{extend './_layouts/home.html'}}
+
+{{block 'title'}}
+<title>几道小山的随心笔记</title>
+{{/block}}
+
+{{block 'head'}}
+<link rel="stylesheet" type="text/css" href="/public/css/free_notes.css">
+<link rel="stylesheet" type="text/css" href="/public/css/main.css">
+{{/block}}
+
+{{block 'content'}}
+<div class="content">
+    <div class="main">
+        <div>
+            <h2>随心笔记:</h2>
+            {{ each data.free_notes }}
+            <div class="item box_shadow">
+                <a href="/show_articles?id={{ $value.id }}">
+                    <h3>{{ $value.title }}</h3>
+                    <p><span>作者：{{ $value.author }}</span> <span>发表时间：{{ $value.date_time }}</span></p>
+                    <p>{{ $value.contents[0] }}</p>
+                </a>
+            </div>
+            {{ /each }}
+        </div>
+    </div>
+</div>
+{{/block}}

@@ -1,0 +1,58 @@
+{{extend './_layouts/home.html'}}
+
+{{block 'title'}}
+<title>几道小山的文章</title>
+{{/block}}
+
+{{block 'head'}}
+<link rel="stylesheet" type="text/css" href="/public/css/show_articles.css">
+<link rel="stylesheet" type="text/css" href="/public/css/main.css">
+{{/block}}
+
+{{block 'content'}}
+<div class="content">
+    <div class="main article">
+        {{ if data.note }}
+        <h2>{{ data.note.title }}
+            <button class="box_shadow">返回</button>
+        </h2>
+        <p>
+            <span>作者：{{ data.note.author }}</span>
+            <span>发布时间：{{ data.note.date_time }}</span>
+            <span>浏览次数（{{ data.note.views }}）</span>
+        </p>
+        <div class="article_inner box_shadow">
+            {{ each data.note.contents}}
+            <p class="paragraph">{{ $value }}</p>
+            {{ /each }}
+            <p class="art_tag_lists">标签：
+                {{ each data.note.tags}}
+                <a href="/search?tag={{ $value }}" class="art_tags box_shadow">{{ $value }}</a>
+                {{ /each }}
+            </p>
+        </div>
+        <div class="adjacent">
+            <a href="/show_articles?id={{ data.prevNote.id }}" class="prev">上一篇文章：{{ data.prevNote.title }}</a>
+            <a href="/show_articles?id={{ data.nextNote.id }}" class="next">下一篇文章：{{ data.nextNote.title }}</a>
+        </div>
+        {{ else }}
+        <h2>数据丢失
+            <button>返回</button>
+        </h2>
+        <div class="article_inner">
+            <p class="paragraph">数据丢失</p>
+        </div>
+        {{ /if }}
+    </div>
+</div>
+{{/block}}
+
+{{block 'script'}}
+<script>
+    $(function () {
+        $('h2>button').on('click', function () {
+            window.history.go(-1)
+        })
+    })
+</script>
+{{/block}}
